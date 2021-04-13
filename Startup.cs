@@ -25,8 +25,10 @@ namespace WebApplicationTeam1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string ConnectionString = "Server=(localdb)\\MSSQLLocalDB;Database=SchoolProject;Trusted_Connection=True;MultipleActiveResultSets=true";
+
             // Setup EF connection
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration["Data:StudentProject:ConnectionString"]));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(ConnectionString));
 
 
             // added from MVC template
