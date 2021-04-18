@@ -11,7 +11,7 @@ namespace WebApplicationTeam1.Models
         public int StudentId { get; set; } //PK for students
         public String StudentName { get; set; }
 
-        public float GPA { get; set; }
+        public double GPA { get; set; }
 
         public int SchoolId { get; set; } //FK for schools
 
@@ -34,6 +34,7 @@ namespace WebApplicationTeam1.Models
 
         public string County { get; set; }
 
+        public int ZipCode { get; set; }
 
     }
 }
